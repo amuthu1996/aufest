@@ -1,0 +1,23 @@
+.pad-dn
+{
+	margin-top: 50px ;
+}
+
+.f-form h5
+{
+	display: inline;
+}
+
+td
+{
+	width: 200px;
+	height: 60px;
+	padding: 5px;
+}
+
+.hed
+{
+	text-align: right;
+	font-weight: bold;
+	font-size: 15px;
+}

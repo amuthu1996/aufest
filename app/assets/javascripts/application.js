@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+if(jQuery('#register_sports').innerHTML == "BADMINTON")
+	jQuery('.cat').addClass('show').removeClass('hide');
