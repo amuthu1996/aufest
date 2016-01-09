@@ -1,3 +1,6 @@
+<% game = Array[ "BASKETBALL", "BADMINTON", "BALL BADMINTON", "TABLE TENNIS", "VOLLEYBALL", "CRICKET", "FOOTBALL", "HANDBALL", "HOCKEY", "KABBADI", "KHO-KHO"] %>
+
+
 <%= form_for(@register) do |f| %>
   <% if @register.errors.any? %>
     <div id="error_explanation">
@@ -62,7 +65,9 @@
   <div class="field">
 	<%= f.label :sports %>
   	<%= f.select(:sports) do %>
-   		<%= content_tag(:option, "Basketball", value: "Basketball") %>
+      <% for c in game %>
+   		 <%= content_tag(:option, c, value: c) %>
+      <% end %>
   	<% end %>
   </div>
   <div class="field">
