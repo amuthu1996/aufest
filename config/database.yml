@@ -15,7 +15,7 @@ development:
   database: aufest_development
   pool: 5
   username: root
-  password: root@123
+  password: root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -38,5 +38,5 @@ production:
   database: aufest_production
   pool: 5
   username: root
-  password: root@123
+  password: root
   host: localhost

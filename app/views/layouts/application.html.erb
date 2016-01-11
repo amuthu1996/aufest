@@ -19,4 +19,89 @@
       <%= render 'layouts/messages' %>
       <%= yield %>
   </body>
+  <script type="text/javascript">
+    $(".cat").hide();
+    $("#register_singdouble").hide();
+    $("#register_menwomen").hide();
+
+    $("#register_sports").focusout(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BASKETBALL" || x == "VOLLEYBALL" || x == "BALL BADMINTON" || x == "BADMINTON" || x == "TABLE TENNIS")
+      {
+        $(".cat").fadeIn("slow");
+      }
+      else
+      {
+        $(".cat").hide();
+      }
+
+    });
+
+    $("#register_sports").focus(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BASKETBALL" || x == "VOLLEYBALL" || x == "BALL BADMINTON" || x == "BADMINTON" || x == "TABLE TENNIS")
+      {
+        $(".cat").fadeIn("slow");
+      }
+      else
+      {
+        $(".cat").hide();
+      }
+
+    });
+
+
+    $("#register_sports").focusout(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BASKETBALL" || x == "VOLLEYBALL" || x == "BALL BADMINTON")
+      {
+        $("#register_menwomen").show();
+      }
+      else
+      {
+        $("#register_menwomen").hide();
+      }
+
+    });
+
+    $("#register_sports").focus(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BASKETBALL" || x == "VOLLEYBALL" || x == "BALL BADMINTON")
+      {
+        $("#register_menwomen").show();
+      }
+      else
+      {
+        $("#register_menwomen").hide();
+      }
+
+    });
+
+    $("#register_sports").focusout(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BADMINTON" || x == "TABLE TENNIS")
+      {
+        $("#register_singdouble").show();
+      }
+      else
+      {
+        $("#register_singdouble").hide();
+      }
+
+    });
+
+    $("#register_sports").focus(function(){
+      var x = document.forms["myForm"]["register[sports]"].value;
+      if(x == "BADMINTON" || x == "TABLE TENNIS")
+      {
+        $("#register_singdouble").show();
+      }
+      else
+      {
+        $("#register_singdouble").hide();
+      }
+
+    });
+  </script>
+
 </html>

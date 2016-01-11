@@ -1,7 +1,7 @@
 <% game = Array[ "---", "BASKETBALL", "BADMINTON", "BALL BADMINTON", "TABLE TENNIS", "VOLLEYBALL", "CRICKET", "FOOTBALL", "HANDBALL", "HOCKEY", "KABBADI", "KHO-KHO"] %>
 
 <div class= "f-form">
-  <%= form_for(@register) do |f| %>
+  <%= form_for(@register, :html => { :name => "myForm", :method => "post", :id => "myFromId" }) do |f| %>
     <% if @register.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@register.errors.count, "error") %> prohibited this register from being saved:</h2>
@@ -14,107 +14,82 @@
       </div>
     <% end %>
 
-    <table>
-      <tr>
-        <td class="hed"><%= f.label :fname, "Name" %></td>
-        <td colspan="2"><%= f.text_field :fname, :placeholder => "First Name", :class => "form-control" %></td>
-        <td colspan="2"><%= f.text_field :lname, :placeholder => "Last Name", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :menwomen, "Gender" %></td>
-        <td>
-            <%= f.select(:menwomen) do %>
-              <%= content_tag(:option, "Male", value: "Male") %>
-              <%= content_tag(:option, "Female", value: "Female") %>
-            <% end %>
-        </td>
-        
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :email, "E-Mail" %></td>
-        <td colspan="2"><%= f.text_field :email, :placeholder => "abc@example.com", :class => "form-control" %></td>
-        <td class="hed"><%= f.label :contactno, "Contact Number" %></td>
-        <td><%= f.text_field :contactno, :placeholder => "9876543210", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :collegename, "College Name" %></td>
-        <td colspan="2"><%= f.text_field :collegename, :placeholder => "College of Engineering, Guindy", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :coladdress, "College Address" %></td>
-        <td colspan="2" rowspan="2"><%= f.text_area :coladdress, :class => "form-control" %></td>
-      </tr>
-      <tr>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :city, "City" %></td>
-        <td><%= f.text_field :city, :placeholder => "Chennai", :class => "form-control" %></td>
-        <td class="hed"><%= f.label :state, "State" %></td>
-        <td><%= f.text_field :state, :placeholder => "Tamil Nadu", :class => "form-control" %></td> 
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :pincode %></td>
-        <td><%= f.number_field :pincode, :placeholder => "600025", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :fphydirname, "Physical Director's Name" %></td>
-        <td colspan="2"><%= f.text_field :fphydirname, :placeholder => "First Name", :class => "form-control" %></td>
-        <td colspan="2"><%= f.text_field :lphydirname, :placeholder => "Last Name", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :pdcontact, "Physical Director's Contact" %></td>
-        <td><%= f.number_field :pdcontact, :placeholder => "9876543210", :class => "form-control" %></td>
-      </tr>
-      <tr>
-        <td class="hed"><%= f.label :sports %></td>
-        <td>
-          <%= f.select(:sports) do %>
+
+      <div class="row form_field">
+        <%= f.label :fname, "Name", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :fname, :placeholder => "First Name", :class => "form-control", :required => true %></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :lname, :placeholder => "Last Name", :class => "form-control", :required => true %></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :email, "E-Mail", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :email, :placeholder => "abc@example.com", :class => "form-control", :required => true, :type => "email" %></div>
+        <%= f.label :contactno, "Contact Number", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :contactno, :placeholder => "9876543210", :class => "form-control", :required => true %></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :collegename, "College Name", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :collegename, :placeholder => "College of Engineering, Guindy", :class => "form-control", :required => true %></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :coladdress, "College Address", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12" row form_fieldspan="2"><%= f.text_area :coladdress, :class => "form-control" %></div>
+      </div>
+      <div class="row form_field">
+      </div>
+      <div class="row form_field">
+        <%= f.label :city, "City", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :city, :placeholder => "Chennai", :class => "form-control", :required => true %></div>
+        <%= f.label :state, "State", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :state, :placeholder => "Tamil Nadu", :class => "form-control", :required => true %></div> 
+      </div>
+      <div class="row form_field">
+        <%= f.label :pincode, "Pincode", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pincode, :placeholder => "600025", :class => "form-control" , :required => true%></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :fphydirname, "Physical Director's Name", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :fphydirname, :placeholder => "First Name", :class => "form-control", :required => true %></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :lphydirname, :placeholder => "Last Name", :class => "form-control" %></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :pdcontact, "Physical Director's Contact", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pdcontact, :placeholder => "9876543210", :class => "form-control" %></div>
+      </div>
+      <div class="row form_field">
+        <%= f.label :sports, "Sports", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+          <%= f.select(:sports, :onFocusOut => "gett()", :required => true) do %>
             <% for c in game %>
              <%= content_tag(:option, c, value: c) %>
             <% end %>
           <% end %>
-        </td>
-      </tr>
+        </div>
+        
+      </div>
       
       
-      <tr class="cat">
-        <td class="hed"><%= f.label :singdouble, "Catogory" %></td>
-        <td>
+      <div class="cat row form_field">
+        <%= f.label :singdouble, "Catogory", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
+          <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
             <%= f.select(:singdouble) do %>
               <%= content_tag(:option, "Singles", value: "Singles") %>
               <%= content_tag(:option, "Doubles", value: "Doubles") %>
               <%= content_tag(:option, "Mixed Doubles", value: "Mixed Doubles") %>
             <% end %>
-        </td>
+
+            <%= f.select(:menwomen) do %>
+              <%= content_tag(:option, "Male", value: "Male") %>
+              <%= content_tag(:option, "Female", value: "Female") %>
+            <% end %>
+          </div>
+      </div>
         
-      </tr>
-      <tr>
-        <td colspan="3"><%= f.label :accepted, "I accept the Terms and Conditions" %><%= f.check_box :accepted %></td>
-      </tr>
-    </table>
     
-    
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-  	
-    	
-      
-      
-      
-      
-      
+      <div class="row form_field">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><%= f.check_box :accepted, :class => "chk", :required => true %><%= f.label :accepted, "I accept the Terms and Conditions" %></div>
+      </div>
+
+   
   
     <div class="actions">
       <%= f.submit %>
