@@ -22,13 +22,13 @@
       </div>
       <div class="row form_field">
         <%= f.label :email, "E-Mail", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :email, :placeholder => "abc@example.com", :class => "form-control", :required => true, :type => "email" %></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :email, :placeholder => "Enter email address here", :class => "form-control", :required => true, :type => "email" %></div>
         <%= f.label :contactno, "Contact Number", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :contactno, :placeholder => "9876543210", :class => "form-control", :required => true %></div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :contactno, :placeholder => "Enter contact number", :class => "form-control", :required => true %></div>
       </div>
       <div class="row form_field">
         <%= f.label :collegename, "College Name", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :collegename, :placeholder => "College of Engineering, Guindy", :class => "form-control", :required => true %></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12"><%= f.text_field :collegename, :placeholder => "Name of your college", :class => "form-control", :required => true %></div>
       </div>
       <div class="row form_field">
         <%= f.label :coladdress, "College Address", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
@@ -38,13 +38,13 @@
       </div>
       <div class="row form_field">
         <%= f.label :city, "City", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :city, :placeholder => "Chennai", :class => "form-control", :required => true %></div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :city, :placeholder => "city", :class => "form-control", :required => true %></div>
         <%= f.label :state, "State", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :state, :placeholder => "Tamil Nadu", :class => "form-control", :required => true %></div> 
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.text_field :state, :placeholder => "state", :class => "form-control", :required => true %></div> 
       </div>
       <div class="row form_field">
         <%= f.label :pincode, "Pincode", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pincode, :placeholder => "600025", :class => "form-control" , :required => true%></div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pincode, :placeholder => "000000", :class => "form-control" , :required => true%></div>
       </div>
       <div class="row form_field">
         <%= f.label :fphydirname, "Physical Director's Name", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
@@ -53,7 +53,7 @@
       </div>
       <div class="row form_field">
         <%= f.label :pdcontact, "Physical Director's Contact", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pdcontact, :placeholder => "9876543210", :class => "form-control" %></div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6"><%= f.number_field :pdcontact, :placeholder => "number here", :class => "form-control" %></div>
       </div>
       <div class="row form_field">
         <%= f.label :sports, "Sports", :class => "hed col-lg-2 col-md-2 col-sm-12 col-xs-12" %>
@@ -90,20 +90,20 @@
 
 <p>1. All the events will be conducted at the Guindy campus (CEG) of Anna University, except Badminton and Table Tennis, which will be held at the MIT campus, Chromepet.</p>
 <p>2. The maximum entry for each game will be only <strong>16 teams</strong>, except Cricket, for which it is only <strong>8 teams.</strong></p>
-</p><p>3. Entries will be closed and fixtures will be drawn for all games<strong> three days before the tournament date</strong>. Fixtures for all games will be drawn by lot basis only. 
+</p><p>3. Entries will be closed and fixtures will be drawn for all games<strong> three days before the tournament date</strong>. Fixtures for all games will be<strong> drawn by lot basis only.</strong> 
 </p><p>4. The reporting time for the tournament is at<strong> 8 am sharp on 12-2-2016.</strong>
-</p><p>5. Matches will be conducted as per fixtures framed. Teams participating in the game should report 30 minutes before the commencement. The presence of Team Managers is mandatory before, during and after the competition.
-</p><p>6. Accommodation will not be provided to the participating teams.
+</p><p>5. Matches will be conducted as per fixtures framed. Teams participating in the game should<strong> report 30 minutes before the commencement.</strong> The presence of Team Managers is mandatory before, during and after the competition.
+</p><p>6. <strong>Accommodation will not be provided to the participating teams.</strong>
 </p><p>7. Food and Beverages will be available in the college canteen on payment.
 </p><p>8. All the participating teams shall be governed by the campus rules in force. Alcohol and smoking are strictly banned. Team Managers are required to enforce strict discipline among players.
-</p><p>9. Players participating in the tournament with the valid ID proof only will be allowed in the campuses. Non-players or outsiders or spectators accompanying the team should be strictly avoided.
-</p><p>10. The Eligibility of players shall be as per the AIU – AUSB rules in force.
-</p><p>11. Details of players in the Entry form should be signed by both Principal and Director of Physical Education of the concerned institution, and shall be produced to the organising committee on the day of the tournament.
+</p><p>9. Players participating in the tournament with the<strong> valid ID proof </strong>only will be allowed in the campuses. Non-players or outsiders or spectators accompanying the team should be strictly avoided.
+</p><p>10. The Eligibility of players shall be as per the<strong> AIU – AUSB rules</strong> in force.
+</p><p>11. Details of players in<strong> the Entry form should be signed by both Principal and Director of Physical Education of the concerned institution,</strong> and shall be produced to the organising committee on the day of the tournament.
 </p><p>12. Individual ID cards of players duly signed by the Principal of the college concerned should be available throughout the days of the events, and shall be produced before the commencement of the game or on demand for verification and authentication purposes.
 </p><p>13. The matches in each game shall be conducted according to the laws/rules in force of the concerned National Sports Federation.
 </p><p>14. The organising committee reserves the rights to change, alter or modify its venue or duration of the game for valid reasons.
 </p><p>15. The team should compete in their distinct/registered colours or uniform. Equipment will not be provided by the organisers of the tournament.
-</p><p>16. Teams should bring balls/shuttlecocks or other such equipment which are approved by the respective National Sports Federation (“COSCO - Tournament” ball for Basketball, STALL 5 STAR for Table Tennis, YONEX shuttlecocks, etc.,
+</p><p>16. Teams should bring balls/shuttlecocks or other such equipment which are approved by the respective<strong> National Sports Federation (“COSCO - Tournament” ball for Basketball, STALL 5 STAR for Table Tennis, YONEX shuttlecocks, etc.,</strong>
 </p><p>17. The decision of the referee in all the games is final. No protest shall be entertained on any account.</p>
 </div>    
       <div class="row form_field">

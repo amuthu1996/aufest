@@ -1,5 +1,6 @@
 class RegistersController < ApplicationController
-  before_action :set_register, only: [:show, :edit, :update, :destroy]
+ before_action :authenticate_user!, except: [:show, :create, :new] 
+ before_action :set_register, only: [:show, :edit, :update, :destroy]
 
   # GET /registers
   # GET /registers.json
